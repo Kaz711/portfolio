@@ -33,7 +33,8 @@
     <!-- Custom styles for this template -->
     <link href="./css/carousel.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+    <script src="./js/jquery-3.4.1.min.js" ></script>
+    <script>window.jQuery || document.write('<script src=".js/jquery-slim.min.js"><\/script>')</script><script src="./js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
     <script src="js/SuperSimpleSlider.min.js"></script>
   </head>
@@ -154,7 +155,7 @@
       </div>    
     </div>
 
-    <hr class="featurette-divider"> 
+    <hr class="featurette-divider" style="margin-top: 2em;"> 
 
 <!-- Three columns of js -->
     <div class="row">
@@ -226,13 +227,19 @@
     </div>
 <!-- /Three columns of js -->
 
-    <hr class="featurette-divider">
+    <hr class="featurette-divider" style="margin-top: 2em;">
 
 <!-- SuperSimpleSlider -->
+<script type="text/javascript" >
+sAutoplayDelay = 4000;
+sArrowLeftUrl = 'img/arrows/arrow_left_white.png'; // image url for left arrow
+sArrowRightUrl = 'img/arrows/arrow_right_white.png'; // image url for right arrow
+</script>
+
     <hr class="featurette-divider">
     <p class="h1" style="text-align: center;">achievements</p>
     <p style="text-align: center; margin-bottom: 30px;">Here is Recent works.</p>
-<div class="simpleSlider" id="sNr1">
+<div class="simpleSlider" id="sNr1" style="height: 300px;">
 <img src="img/sampleImg1.jpg" alt="sample image 1" />
 <img src="img/sampleImg2.jpg" alt="sample image 2" />
 <img src="img/sampleImg3.jpg" alt="sample image 3" />
@@ -328,16 +335,116 @@
 </div>
 <!-- /Card decks & btn -->
 
-    <hr class="featurette-divider">
-
   </div><!-- /.container -->
 
   <!-- FOOTER -->
   <footer class="container">
-    <p class="float-right"><a href="#">Back to top</a></p>
-    <p>&copy; 2017-2019 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <p style="text-align: center;">&copy; 2017-2019 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </footer>
+
+    <!-- scroll btn -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+<div id="page_top"><a href="#"></a></div>
+
+<!-- <p class="pagetop"><a href="#wrap">▲</a></p> -->
+<script>
+$(document).ready(function() {
+  var page_top = $('#page_top');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            page_top.fadeIn();
+       } else {
+            page_top.fadeOut();
+            }
+       });
+       page_top.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 1500);
+              return false;
+   });
+});
+</script>
+<style>
+  #page_top{
+    width: 90px;
+    height: 90px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: #640125;
+    opacity: 0.6;
+    border-radius: 50%;
+  }
+  #page_top a{
+    position: relative;
+    display: block;
+    width: 90px;
+    height: 90px;
+    text-decoration: none;
+  }
+  #page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -40px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+  #page_top a::after{
+    content: 'PAGE TOP';
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 45px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+</style>
+
+<!-- <style>
+  .pagetop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+}
+.pagetop a {
+    display: block;
+    background-color: #ccc;
+    text-align: center;
+    color: #222;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 5px 10px;
+  filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+.pagetop a:hover {
+    display: block;
+    background-color: #b2d1fb;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    padding:5px 10px;
+  filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+</style> -->
+    <!-- /scroll btn -->
+
 </main>
-<script src="./js/jquery-3.4.1.min.js" ></script>
-      <script>window.jQuery || document.write('<script src=".js/jquery-slim.min.js"><\/script>')</script><script src="./js/bootstrap.bundle.min.js"></script></body>
+  </body>
 </html>
