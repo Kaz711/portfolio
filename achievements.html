@@ -9,6 +9,8 @@
     <title>Carousel Template · Bootstrap</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
+    <link rel="stylesheet" href="css/triangle.css"> <!-- CSS reset -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -79,12 +81,15 @@
   <p class="h1" style="text-align: center; margin-top: 30px;">Achievements</p>
   <p style="text-align: center; margin-bottom: 30px;">Here is Recent works.</p>
 
+<div class="container">
   <div class="row">
-  <div class="col-md-2 ml-auto" style="margin-bottom: 20px;">
-  <div class="card" style="width: 30rem;">
-  <h4 class="card-header">
-    Project overview
-  </h4>
+  <div class="col-md-6" style="margin-bottom: 20px;">
+  <div class="card">
+  <div class="card-header" style="text-align: center;">
+  <h3>Project overview</h3>
+  <p><small>─ プロジェクト概要 ─</small></p>
+  </div>
+
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><small>企業：制作会社</small></li>
     <li class="list-group-item"><small>内容：自動車事業会社の新規リニューアル、中規模サイト、運用更新、数百ページ</small></li>
@@ -95,8 +100,8 @@
   </ul>
 </div>
 </div>
-  <div class="col-md-6 ml-auto">
-  <div class="card" style="width: 30rem;">
+  <div class="col-md-6">
+  <div class="card">
   <h4 class="card-header">
     Team composition
   </h4>
@@ -110,10 +115,30 @@
 </div>
 </div>
 </div>
+</div>
+
+<div class="container">
+<section>
+  <nav>
+    <ol class="cd-breadcrumb triangle">
+      <li><a href="#0">マーケティング</a></li>
+      <li><a href="#0">企画・要件定義</a></li>
+      <li><a href="#0">サイト設計</a></li>
+      <li><a href="#0">新規制作</a></li>
+      <li><a href="#0">開発・テスト</a></li>
+      <li class="current"><em>運用改善</em></li>
+    </ol>
+  </nav>
+</section>
+</div>
 
 <hr class="featurette-divider">
   <p style="text-align: center; margin-bottom: 30px;">Date：2017/11 Teaser site</p>
-<img src="img/Screenshot-test.jpg" class="img-fluid" alt="Responsive image">
+<div class="container">
+  <div>
+    <img src="img/Screenshot-test.jpg" class="img-fluid" alt="Responsive image">
+  </div>
+</div>
 
   <!-- FOOTER -->
   <footer class="container">
