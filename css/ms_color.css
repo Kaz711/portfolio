@@ -2,5 +2,7 @@
 -------------------------------------------------- */
 /* btn class */
 .btn-msc {
-	color: #281a14;
+    color: #fff;
+    background-color: #281a14;
+    border-color: #281a14;
 }
