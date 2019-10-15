@@ -14,6 +14,10 @@
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Color CSS -->
+    <link href="./css/ms_color.css" rel="stylesheet">
+
       <style>
         .bd-placeholder-img {
           font-size: 1.125rem;
@@ -70,7 +74,7 @@
 <header>
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="./index.html" class="text-msc">Home</a></li>
       <li class="breadcrumb-item active" aria-current="page">Library</li>
     </ol>
   </nav>
@@ -78,7 +82,7 @@
 
 <main>
   <!-- achievements -->
-  <p class="h1" style="text-align: center; margin-top: 30px;">Achievements</p>
+  <p class="h1" style="text-align: center; margin-top: 60px;">Achievements</p>
   <p style="text-align: center; margin-bottom: 30px;">Here is Recent works.</p>
 
 <div class="container">
@@ -88,7 +92,7 @@
   <div class="card-header" style="text-align: center;">
   <h3>Project overview</h3>
   <p><small>─ プロジェクト概要 ─</small></p>
-  </div>
+</div>
 
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><small>企業：制作会社</small></li>
@@ -100,11 +104,13 @@
   </ul>
 </div>
 </div>
-  <div class="col-md-6">
+  <div class="col-md-6" style="margin-bottom: 20px;">
   <div class="card">
-  <h4 class="card-header">
-    Team composition
-  </h4>
+  <div class="card-header" style="text-align: center;">
+  <h3>Team composition</h3>
+  <p><small>─ チーム構成 ─</small></p>
+</div>
+
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><small>社内：クリエイティブディレクター／アートディレクター／映像・動画クリエイター／テクニカルライター／ライター／デザイナー／Webプロデューサー／ Webディレクター＜計15～20名＞
 </small></li>
@@ -117,7 +123,20 @@
 </div>
 </div>
 
-<div class="container">
+<!-- Checkbox buttons -->
+<div class="container" style="text-align: center;">
+<div class="btn-group btn-group-toggle btn-group-lg" data-toggle="buttons">
+  <label class="btn btn-light"><input type="radio" name="options" id="option1" autocomplete="off" checked>マーケティング</label>
+  <label class="btn btn-secondary"><input type="radio" name="options" id="option2" autocomplete="off">企画・要件定義</label>
+  <label class="btn btn-dark active"><input type="radio" name="options" id="option2" autocomplete="off">サイト設計</label>
+  <label class="btn btn-dark"><input type="radio" name="options" id="option2" autocomplete="off">新規制作</label>
+  <label class="btn btn-dark"><input type="radio" name="options" id="option2" autocomplete="off">開発・テスト</label>
+  <label class="btn btn-light"><input type="radio" name="options" id="option3" autocomplete="off">運用改善</label>
+</div>
+</div>
+<!-- Checkbox buttons -->
+
+<!-- <div class="container">
 <section>
   <nav>
     <ol class="cd-breadcrumb triangle" style="margin: auto;">
@@ -130,7 +149,7 @@
     </ol>
   </nav>
 </section>
-</div>
+</div> -->
 
 <hr class="featurette-divider">
   <p style="text-align: center; margin-bottom: 30px;">Date：2017/11 Teaser site</p>
@@ -142,7 +161,7 @@
 
   <!-- FOOTER -->
   <footer class="container">
-    <p style="text-align: center;">&copy; 2017-2019 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <p style="text-align: center;">&copy; 2017-2019 Company, Inc. &middot; <a href="#" class="text-msc">Privacy</a> &middot; <a href="#" class="text-msc">Terms</a></p>
   </footer>
 
     <!-- scroll btn -->
@@ -174,8 +193,8 @@ $(document).ready(function() {
     position: fixed;
     right: 0;
     bottom: 0;
-    background: #640125;
-    opacity: 0.6;
+    background: #9f6f55;
+    opacity: 0.8;
     border-radius: 50%;
   }
   #page_top a{

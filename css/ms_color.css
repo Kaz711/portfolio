@@ -39,3 +39,23 @@
 .show > .btn-msc.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
+
+/* Checkbox btn class 茶系で作りたい*/
+.btn-ck_msc {
+  color: #fff;
+  background-color: #3f312b;
+  border-color: #3f312b;
+}
+
+.btn-ck_msc:hover {
+  color: #fff;
+  background-color: #281a14;
+  border-color: #250d00;
+}
+
+.btn-ck_msc:not(:disabled):not(.disabled).active, .btn-ck_msc:not(:disabled):not(.disabled):active, 
+.show > .btn-ck_msc.dropdown-toggle {
+    color: #fff;
+    background-color: #281a14;
+    border-color: #250d00;
+}
