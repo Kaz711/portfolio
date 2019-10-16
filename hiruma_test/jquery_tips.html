@@ -1,189 +1,258 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- <script src="./js/Chart.bundle.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
-    <style>
-    </style>
- </head>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <style></style>
+  </head>
   <body>
     <script>
-      var tes = document.getElementById 
-      </script>
+      var tes = document.getElementById;
+    </script>
     <div class="tes">
       ひるまてすと
     </div>
-<style>
- .tes {
-   background-color: #ff0;
- }
-</style>
-    <div class="chart-container" style="position: relative; height:30vh; width:30vw">
+    <style>
+      .tes {
+        background-color: #ff0;
+      }
+    </style>
+    <div
+      class="chart-container"
+      style="position: relative; height:30vh; width:30vw"
+    >
       <canvas id="myChart"></canvas>
     </div>
     <script>
-      var ctx = document.getElementById('myChart').getContext('2d');
+      var ctx = document.getElementById("myChart").getContext("2d");
       var chart = new Chart(ctx, {
-          // 作成したいチャートのタイプ
-          type: 'line',
-      
-          // データセットのデータ
-          data: {
-              labels: ["1月", "2月", "3月", "4月", "5月", "6月", "7月"],
-              datasets: [{
-                  label: "初めてのデータセット",
-                  backgroundColor: 'rgb(255, 99, 132)',
-                  borderColor: 'rgb(255, 99, 132)',
-                  data: [0, 10, 5, 2, 20, 30, 45],
-              }]
-          },
-      
-          // ここに設定オプションを書きます
-          options: {
-          }
+        // 作成したいチャートのタイプ
+        type: "line",
+
+        // データセットのデータ
+        data: {
+          labels: ["1月", "2月", "3月", "4月", "5月", "6月", "7月"],
+          datasets: [
+            {
+              label: "初めてのデータセット",
+              backgroundColor: "rgb(255, 99, 132)",
+              borderColor: "rgb(255, 99, 132)",
+              data: [0, 10, 5, 2, 20, 30, 45]
+            }
+          ]
+        },
+
+        // ここに設定オプションを書きます
+        options: {}
       });
     </script>
- 
-    <br/>
-    <br/>
-    <br/>
 
-    <div class="chart-container" style="position: relative; height:30vh; width:30vw">
+    <br />
+    <br />
+    <br />
+
+    <style>
+      .circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+      .blue-color {
+        background: skyblue;
+      }
+      .red-color {
+        background: #f4a;
+      }
+      .green-color {
+        background: greenyellow;
+      }
+      .chart-container-bubble {
+        position: relative;
+        width: 100%;
+      }
+    </style>
+    <script>
+      $("#philosophy-container").width();
+    </script>
+    <div class="container">
+      <div class="row">
+        <div id="philosophy-container" class="col-sm-4">
+          <div id="phi-no1" class="circle blue-color"></div>
+          <div id="phi-no2" class="circle red-color"></div>
+          <div id="phi-no3" class="circle green-color"></div>
+        </div>
+        <div class="col-sm-8"><a class="btn btn-primary">aaaa</a></div>
+      </div>
+    </div>
+
+    <div
+      class="chart-container"
+      style="position: relative; height:30vh; width:30vw"
+    >
       <canvas id="myBubbleChart"></canvas>
     </div>
     <script>
-      var ctx = document.getElementById('myBubbleChart').getContext('2d');
+      var ctx = document.getElementById("myBubbleChart").getContext("2d");
       var chart = new Chart(ctx, {
-          // 作成したいチャートのタイプ
-          type: 'bubble',
-      
-          // データセットのデータ
-          data: {
-              datasets: [
-                {
-                "label": "ユーザー",
-                "data": [{"x":10, "y":14.75, "r":150}],
-                "backgroundColor":"rgb(200, 200, 200)"
-                },
-                {
-                "label": "クライアント",
-                "data": [{"x":9.75, "y":14.5, "r":150}],
-                "backgroundColor":"rgb(99, 99, 99)"
-                },
-                {
-                "label": "制作支援",
-                "data": [{"x":10.25, "y":14.5, "r":150}],
-                "backgroundColor":"rgb(99, 99, 132)"
-                }
-              ]
-          },
-      
-          // ここに設定オプションを書きます
-          options: {
-            scales: {
-              scaleLabel: [{
+        // 作成したいチャートのタイプ
+        type: "bubble",
+
+        // データセットのデータ
+        data: {
+          datasets: [
+            {
+              label: "ユーザー",
+              data: [{ x: 10, y: 14.75, r: 150 }],
+              backgroundColor: "rgb(200, 200, 200)"
+            },
+            {
+              label: "クライアント",
+              data: [{ x: 9.75, y: 14.5, r: 150 }],
+              backgroundColor: "rgb(99, 99, 99)"
+            },
+            {
+              label: "制作支援",
+              data: [{ x: 10.25, y: 14.5, r: 150 }],
+              backgroundColor: "rgb(99, 99, 132)"
+            }
+          ]
+        },
+
+        // ここに設定オプションを書きます
+        options: {
+          scales: {
+            scaleLabel: [
+              {
                 display: false,
                 fontColor: "#fff"
-              }],
-              xAxes: [{
-                gridLines: {
-                  display: false
-                }
-              }],
-              yAxes: [{
-                gridLines: {
-                  display: false
-                }
-              }],
-              ticks:{
-                display: false
               }
+            ],
+            xAxes: [
+              {
+                gridLines: {
+                  display: false
+                }
+              }
+            ],
+            yAxes: [
+              {
+                gridLines: {
+                  display: false
+                }
+              }
+            ],
+            ticks: {
+              display: false
             }
           }
+        }
       });
     </script>
- 
-    <br/>
-    <br/>
-    <br/>
 
-    <div class="chart-container" style="position: relative; height:30vh; width:30vw">
+    <br />
+    <br />
+    <br />
+
+    <div
+      class="chart-container"
+      style="position: relative; height:30vh; width:30vw"
+    >
       <canvas id="myCircleChart"></canvas>
     </div>
     <script>
-      var ctx = document.getElementById('myCircleChart').getContext('2d');
+      var ctx = document.getElementById("myCircleChart").getContext("2d");
       var chart = new Chart(ctx, {
-          // 作成したいチャートのタイプ
-          type: 'pie',
-          data:{
-            labels:["ブランドサイト","キャンペーンサイト","ショップサイト","アプリ"],
-            datasets:[{
+        // 作成したいチャートのタイプ
+        type: "pie",
+        data: {
+          labels: [
+            "ブランドサイト",
+            "キャンペーンサイト",
+            "ショップサイト",
+            "アプリ"
+          ],
+          datasets: [
+            {
               label: "データセット",
-              data:[48,22,25,5]
-            }]
-
-          }
-
+              data: [48, 22, 25, 5]
+            }
+          ]
         }
-      );
-
+      });
     </script>
 
-    <br/>
-    <br/>
-    <br/>
+    <br />
+    <br />
+    <br />
 
-    <div class="chart-container" style="position: relative; height:30vh; width:30vw">
+    <div
+      class="chart-container"
+      style="position: relative; height:30vh; width:30vw"
+    >
       <canvas id="myRadarChart"></canvas>
     </div>
     <script>
-      new Chart(document.getElementById("myRadarChart"),
-        {"type":"radar","data":
-          {"labels":["プロジェクト統括","企画・設計","デザインUIUX","システム開発","運用"],
-            "datasets":[
-              {
-                "label":"スキルセット",
-                "data":[40,60,85,15,50],
-                "fill":true,
-                "backgroundColor":"rgba(54, 162, 235, 0.2)",
-                "borderColor":"rgb(54, 162, 235)",
-                "pointBackgroundColor":"rgb(54, 162, 235)",
-                "pointBorderColor":"#fff",
-                "pointHoverBackgroundColor":"#fff",
-                "pointHoverBorderColor":"rgb(54, 162, 235)"
-              }
-            ]
-          },
-          "options":{
-            "elements":{
-              "line":{
-                "tension":0,
-                "borderWidth":3
-              }
+      new Chart(document.getElementById("myRadarChart"), {
+        type: "radar",
+        data: {
+          labels: [
+            "プロジェクト統括",
+            "企画・設計",
+            "デザインUIUX",
+            "システム開発",
+            "運用"
+          ],
+          datasets: [
+            {
+              label: "スキルセット",
+              data: [40, 60, 85, 15, 50],
+              fill: true,
+              backgroundColor: "rgba(54, 162, 235, 0.2)",
+              borderColor: "rgb(54, 162, 235)",
+              pointBackgroundColor: "rgb(54, 162, 235)",
+              pointBorderColor: "#fff",
+              pointHoverBackgroundColor: "#fff",
+              pointHoverBorderColor: "rgb(54, 162, 235)"
+            }
+          ]
+        },
+        options: {
+          elements: {
+            line: {
+              tension: 0,
+              borderWidth: 3
             }
           }
-        });
+        }
+      });
     </script>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['timeline']});
+      google.charts.load("current", { packages: ["timeline"] });
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
-        var container = document.getElementById('timeline');
+        var container = document.getElementById("timeline");
         var chart = new google.visualization.Timeline(container);
         var dataTable = new google.visualization.DataTable();
 
-        dataTable.addColumn({ type: 'string', id: 'President' });
-        dataTable.addColumn({ type: 'date', id: 'Start' });
-        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addColumn({ type: "string", id: "President" });
+        dataTable.addColumn({ type: "date", id: "Start" });
+        dataTable.addColumn({ type: "date", id: "End" });
         dataTable.addRows([
-          [ 'DTPオペレーター', new Date(1789, 3, 30), new Date(1797, 2, 4) ],
-          [ 'Adams',      new Date(1797, 2, 4),  new Date(1801, 2, 4) ],
-          [ 'Jefferson',  new Date(1801, 2, 4),  new Date(1809, 2, 4) ]]);
+          ["DTPオペレーター", new Date(1789, 3, 30), new Date(1797, 2, 4)],
+          ["Adams", new Date(1797, 2, 4), new Date(1801, 2, 4)],
+          ["Jefferson", new Date(1801, 2, 4), new Date(1809, 2, 4)]
+        ]);
 
         chart.draw(dataTable);
       }
     </script>
-     <div id="timeline" style="height: 180px;"></div>
+    <div id="timeline" style="height: 180px;"></div>
   </body>
 </html>
